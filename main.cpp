@@ -113,7 +113,7 @@ int getPromedio(int arreglo[], int tamano)
 	acumulador = acumulador + arreglo[i];
 	prom= acumulador/tamano;
 	}
-    return promedio;
+    return prom;
 }
 
 int main ()
