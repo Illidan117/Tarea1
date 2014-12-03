@@ -70,16 +70,16 @@ int getValor(int arreglo[], int posicion)
 //Devuelve el numero mayor del arreglo (dado) que contiene tamano (dado) elementos
 int getMayor(int arreglo[], int tamano)
 {
-    int temp = 0;
+  int vault = 0;
   for(int i=0; i<tamano-1; i++)
        {
           for(int j=0; j < tamano-i-1; j++)
           {
             if(arreglo[j] > arreglo[j+1])
             {
-                temp= arreglo[j+1];
+                vault= arreglo[j+1];
                 arreglo[j+1]= arreglo[j];
-                arreglo[j]=temp;
+                arreglo[j]=vault;
 
             }
      }
@@ -90,16 +90,15 @@ int getMayor(int arreglo[], int tamano)
 //Devuelve el numero menor del arreglo (dado) que contiene tamano (dado) elementos
 int getMenor(int arreglo[], int tamano)
 {
-    	int menor=0;
-	int temp = 0;
+  int vault = 0;
   for(int i=0; i<tamano-1; i++)
        {
           for(int j=0; j < tamano-i-1; j++)
           {
             if(arreglo[j] > arreglo[j+1]){
-                temp= arreglo[j+1];
+                vault= arreglo[j+1];
                 arreglo[j+1]= arreglo[j];
-                arreglo[j]=temp;
+                arreglo[j]=vault;
             }
           }
     }
@@ -107,12 +106,12 @@ int getMenor(int arreglo[], int tamano)
            }
 int getPromedio(int arreglo[], int tamano)
 {
-    int suma = 0;
-	int promedio = 0;
+    int acumulador = 0;
+	int prom = 0;
 	for(int i = 0; i < tamano; i++)
 	{
-	suma = suma + arreglo[i];
-	promedio= suma/tamano;
+	acumulador = acumulador + arreglo[i];
+	prom= acumulador/tamano;
 	}
     return promedio;
 }
